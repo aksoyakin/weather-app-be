@@ -1,0 +1,11 @@
+version: '4.34.1'
+
+services:
+  app:
+    image: 'weather-app-be:latest'
+    build:
+      context: .
+    ports:
+      - "9595:8080"
+    environment:
+      - "API_KEY=${API_KEY}"
